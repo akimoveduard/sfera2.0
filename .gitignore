@@ -1,11 +1,4 @@
 /node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-#dist
 /dist
 
 # misc

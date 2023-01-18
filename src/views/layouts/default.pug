@@ -1,0 +1,30 @@
+block variables
+
+doctype html
+html(lang='ru' dir='ltr')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='description' content= description)
+
+    link(rel='icon' href=require('Images/favicons/favicon-16px.png') type='image/png' sizes='16x16')
+    link(rel='icon' href=require('Images/favicons/favicon-32px.png') type='image/png' sizes='32x32')
+    link(rel='icon' href=require('Images/favicons/favicon-64px.png') type='image/png' sizes='64x64')
+    
+    //- Page title
+    title= title
+
+    //- Стили страницы
+    block style
+      link(href=require('Styles/main.scss') rel='stylesheet')
+
+    block head 
+      script(src=require('Scripts/index.js') defer)
+
+  body
+    .page
+      
+      main
+        block content
+
+    block script
