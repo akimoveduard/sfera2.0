@@ -1,0 +1,14 @@
+extends Views/layouts/default.pug
+
+block variables
+  - const id = 'news'
+  - const title = 'SFERA'
+  - const description = 'Описание страницы'
+
+append script
+  script(src=require('./main.js'))
+
+append style
+  link(href=require('./styles.scss') rel='stylesheet')
+
+block content

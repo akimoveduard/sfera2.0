@@ -1,0 +1,38 @@
+.social-links {
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link {
+    display: inline-block;
+    text-indent: -999999px;
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    background-color: rgba(201, 206, 213, 0.16);
+    border-radius: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &_youtube {
+      background-image: url('../../images/social-icons/icon-youtube.svg');
+    }
+    &_tiktok {
+      background-image: url('../../images/social-icons/icon-tiktok.svg');
+    }
+    &_vk {
+      background-image: url('../../images/social-icons/icon-vk.svg');
+    }
+    &_dzen {
+      background-image: url('../../images/social-icons/icon-dzen.svg');
+    }
+    &_instagram {
+      background-image: url('../../images/social-icons/icon-instagram.svg');
+    }
+  }
+}

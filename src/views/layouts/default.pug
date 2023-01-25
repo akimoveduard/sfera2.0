@@ -23,8 +23,11 @@ html(lang='ru' dir='ltr')
 
   body
     .page
-      
+      include ../includes/header.pug
+
       main
         block content
+
+      include ../includes/footer.pug
 
     block script

@@ -1,0 +1,12 @@
+.title {
+  color: #222222;
+  margin: 0;
+  padding: 0;
+
+  &_page {
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 700;
+    text-transform: lowercase;
+  }
+}

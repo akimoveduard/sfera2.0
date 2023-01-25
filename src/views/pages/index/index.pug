@@ -12,3 +12,25 @@ append style
   link(href=require('./styles.scss') rel='stylesheet')
 
 block content
+  article.home
+    section.home__lead
+      .home__lead-wrapper
+        .home__lead-grid
+          .home__lead-intro 
+            p.home__lead-title <span class="highlight_blue">SFERA</span>&nbsp;— это не только
+            ul.home__lead-list
+              li.home__lead-list-item Отличное качество звонков
+              li.home__lead-list-item Удобный поиск работы
+              li.home__lead-list-item Доступный сервис знакомств
+              li.home__lead-list-item Мгновенный поиск друзей
+          .home__lead-downloads 
+            p.home__lead-slogan Все бесплатно и без рекламы
+            .download-buttons
+              ul.download-buttons__list
+                li.download-buttons__item
+                  a.button.button_theme_blue(href="#") Скачать на IOS 
+                li.download-buttons__item
+                  a.button.button_theme_blue(href="#") Скачать на Android
+          .home__lead-image-container
+            .home__lead-image-wrapper
+              img.home__lead-image(src=require('Images/home/lead-image.png'), alt="Экраны скачивания приложения из AppStore и Google Play")

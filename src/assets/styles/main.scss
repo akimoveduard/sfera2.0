@@ -1,1 +1,33 @@
 @charset "UTF-8";
+
+// 1. Vendors
+@import
+  'vendors/normalize';
+
+// 2. Abstracts
+@import
+  'abstracts/variables',
+  'abstracts/colors';
+
+// 3. Base
+@import
+  'base/base',
+  'base/fonts';
+
+// 4. Components
+
+
+// 5. Layouts
+@import
+  'layouts/highlight',
+  'layouts/link',
+  'layouts/button',
+  'layouts/video-button',
+  'layouts/download-buttons',
+  'layouts/section',
+  'layouts/header',
+  'layouts/nav',
+  'layouts/langs',
+  'layouts/title',
+  'layouts/footer',
+  'layouts/social-links';

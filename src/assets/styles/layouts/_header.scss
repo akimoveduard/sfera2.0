@@ -1,0 +1,24 @@
+.header {
+  padding: 20px 50px;
+  overflow-x: hidden;
+  
+  & > * {
+    //border: 1px solid red;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1404px;
+    margin: 0 auto;
+  }
+
+  &__video-and-langs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 38px;
+  }
+}

@@ -1,0 +1,48 @@
+-
+  const navLinks = [
+    {
+      'id': 'apps',
+      'title': 'Приложения'
+    },
+    {
+      'id': 'news',
+      'title': 'Новости'
+    },
+    {
+      'id': 'startup',
+      'title': 'Стартапам'
+    },
+    {
+      'id': 'investors',
+      'title': 'Инвесторам'
+    },
+    {
+      'id': 'team',
+      'title': 'Команда'
+    },
+    {
+      'id': 'downloads',
+      'title': 'Скачать'
+    }
+  ]
+
+header.header.section.section_theme_dark(role="header", id="header")
+  .header__container
+    .logo.logo_position_header
+      a(href="/")
+        img.logo__image(src=require("Images/logo.svg"))
+
+    nav.nav.nav_position_header 
+      ul.nav__list
+        each link in navLinks
+          li.nav__item 
+            if id !== link.id
+              a.nav__link.nav__link_header(href='/' + link.id + '.html') !{link.title}
+            else
+              span.nav__link.nav__link_header.nav__link_active= link.title
+
+    .header__video-and-langs
+      button.video-button(type="button") &#9655;
+      .langs 
+        ul.langs__list 
+          li.langs__item.langs_ru Ru

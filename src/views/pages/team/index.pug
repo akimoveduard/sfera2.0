@@ -1,0 +1,226 @@
+extends Views/layouts/default.pug
+
+block variables
+  - const id = 'team'
+  - const title = 'Команда'
+  - const description = 'Описание страницы'
+
+append script
+  script(src=require('./main.js'))
+
+append style
+  link(href=require('./styles.scss') rel='stylesheet')
+
+block content
+  -
+    const team = [
+      {
+        'id': '1',
+        'name': 'Игорь',
+        'role': 'Основатель компании'
+      },
+      {
+        'id': '2',
+        'name': 'Карен',
+        'role': 'Проект-менеджер'
+      },
+      {
+        'id': '3',
+        'name': 'Ксения',
+        'role': 'Исполнительный директор'
+      },
+      {
+        'id': '4',
+        'name': 'Владимир',
+        'role': 'СТО, Golang-разработчик'
+      },
+      {
+        'id': '5',
+        'name': 'Аубакир',
+        'role': 'Системный аналитик, QA-инженер'
+      },
+      {
+        'id': '6',
+        'name': 'Диана',
+        'role': 'Руководитель отдела продвижения'
+      },
+      {
+        'id': '7',
+        'name': 'Александр',
+        'role': 'Backend-разработчик'
+      },
+      {
+        'id': '8',
+        'name': 'Карен',
+        'role': 'DevOPS'
+      },
+      {
+        'id': '9',
+        'name': 'Софья',
+        'role': 'Team lead, android-разработчик'
+      },
+      {
+        'id': '39',
+        'name': 'Артём',
+        'role': 'Android-разработчик'
+      },
+      {
+        'id': '12',
+        'name': 'Денис',
+        'role': 'QA-инженер'
+      },
+      {
+        'id': '35',
+        'name': 'Александр',
+        'role': 'iOS-разработчик'
+      },
+      {
+        'id': '14',
+        'name': 'Маркуш',
+        'role': 'iOS-разработчик'
+      },
+      {
+        'id': '15',
+        'name': 'Руслан',
+        'role': 'Backend-разработчик'
+      },
+      {
+        'id': '18',
+        'name': 'Андрей',
+        'role': 'Team lead, iOS-разработчик'
+      },
+      {
+        'id': '16',
+        'name': 'Константин',
+        'role': 'Backend-разработчик'
+      },
+      {
+        'id': '17',
+        'name': 'Александр',
+        'role': 'Backend-разработчик'
+      },
+      {
+        'id': '19',
+        'name': 'Эдгар',
+        'role': 'Android-разработчик'
+      },
+      {
+        'id': '21',
+        'name': 'Олеся',
+        'role': 'Копирайтер-редактор'
+      },
+      {
+        'id': '22',
+        'name': 'Тимур',
+        'role': 'Android-разработчик'
+      },
+      {
+        'id': '23',
+        'name': 'Шохзод',
+        'role': 'Android-разработчик'
+      },
+      {
+        'id': '24',
+        'name': 'Алена',
+        'role': 'Руководитель отдела, контент-менеджер'
+      },
+      {
+        'id': '25',
+        'name': 'Игнат',
+        'role': 'Android-разработчик'
+      },
+      {
+        'id': '26',
+        'name': 'Руслан',
+        'role': 'Специалист по работе с форумами'
+      },
+      {
+        'id': '29',
+        'name': 'Вадим',
+        'role': 'Backend-разработчик'
+      },
+      {
+        'id': '32',
+        'name': 'Тимур',
+        'role': 'Android-разработчик'
+      },
+      {
+        'id': '34',
+        'name': 'Самир',
+        'role': 'Backend-разработчик'
+      },
+      {
+        'id': '30',
+        'name': 'Елена',
+        'role': 'Motion-дизайнер'
+      },
+      {
+        'id': '40',
+        'name': 'Михаил',
+        'role': 'iOS-разработчик'
+      },
+      {
+        'id': '37',
+        'name': 'Марина',
+        'role': 'UX/UI дизайнер'
+      },
+      {
+        'id': '33',
+        'name': 'Даниил',
+        'role': 'Видеомонтажер'
+      },
+      {
+        'id': '41',
+        'name': 'Павел',
+        'role': 'iOS-разработчик'
+      },
+      {
+        'id': '42',
+        'name': 'Лейла',
+        'role': 'Менеджер по маркетингу'
+      },
+      {
+        'id': '43',
+        'name': 'Кирилл',
+        'role': 'QA-стажер'
+      },
+      {
+        'id': '44',
+        'name': 'Виталий',
+        'role': 'iOS-разработчик'
+      },
+      {
+        'id': '45',
+        'name': 'Егор',
+        'role': 'Android-разработчик'
+      },
+      {
+        'id': '47',
+        'name': 'Илья',
+        'role': 'Android-разработчик'
+      },
+      {
+        'id': '46',
+        'name': 'Роман',
+        'role': 'iOS-разработчик'
+      },
+      {
+        'id': '36',
+        'name': 'Адмирал Генерал',
+        'role': 'Виновник всех багов'
+      },
+    ]
+
+  article.team
+    .section
+      .section__wrapper
+        h1.title.title_page Наша команда
+
+        ul.team__gallery-list 
+          each member in team
+            li.team__gallery-list-item
+              .team__gallery-list-image-wrapper
+                img.team__gallery-list-image(src=require('Images/team/' + member.id + '.jpg'), alt='На фото ' + member.name + ' — ' + member.role)
+              .team__gallery-list-member-wrapper
+                p.team__gallery-list-member-name= member.name
+                p.team__gallery-list-member-role !{member.role}

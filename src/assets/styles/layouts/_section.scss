@@ -1,0 +1,14 @@
+.section {
+  
+  &__wrapper {
+    max-width: 1404px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  &_theme {
+    &_dark {
+      background: black;
+    }
+  }
+}
