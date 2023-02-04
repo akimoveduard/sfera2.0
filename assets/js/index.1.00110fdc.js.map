@@ -1,0 +1,1 @@
+{"version":3,"file":"assets/js/index.1.00110fdc.js","mappings":"AAAAA,QAAQC,IAAI","sources":["webpack://sfera-zone/./src/assets/scripts/index.js"],"sourcesContent":["console.log('>> Global script');"],"names":["console","log"],"sourceRoot":""}

@@ -1,0 +1,2 @@
+console.log("\n>> Apps page"),new Swiper(".swiper",{direction:"horizontal",loop:!0,slidesPerView:5,spaceBetween:0,breakpoints:{640:{slidesPerView:1,spaceBetween:0},768:{slidesPerView:2,spaceBetween:0},1024:{slidesPerView:3,spaceBetween:0},1200:{slidesPerView:6,spaceBetween:0}}});
+//# sourceMappingURL=main.2.ac7af539.js.map
